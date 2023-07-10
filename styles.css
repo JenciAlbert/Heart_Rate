@@ -1,0 +1,275 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+}
+
+.header-title {
+  position: center;
+  text-align: center;
+  font-family: montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 2%;
+  margin: auto;
+  color: #383838;
+  font-size: 3rem;
+}
+
+#chart {
+  width: 900px;
+  margin: auto;
+}
+
+#connections {
+  font-size: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#heart-rate-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+  font-size: 40px;
+}
+
+#myChartContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.dataHeartRate {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  display: inline-block;
+  /* background-color: #f15b5b; */
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 300;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#button:hover {
+  background-color: rgb(72, 80, 96);
+}
+.btn--show {
+  background-color: #444;
+}
+
+#startButton,
+#stopButton,
+#downloadButton,
+#uploadInput {
+  display: inline-block;
+  background-color: #7cb3bb;
+  font-size: 1.25rem;
+  font-family: inherit;
+  font-weight: 300;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.operations__tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.operations__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+}
+
+.operations__tab span {
+  margin-right: 1rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.operations__tab--1 {
+  background-color: #f19743;
+}
+
+.operations__tab--1:hover {
+  background-color: rgb(239, 155, 155);
+}
+.operations__tab--2 {
+  background-color: #76d5ba;
+}
+
+.operations__tab--2:hover {
+  background-color: #8bf6d8;
+}
+
+.operations__tab--active {
+  transform: translateY(-66%);
+}
+
+.operations__content {
+  display: none;
+
+  /* JUST PRESENTATIONAL */
+  font-size: 1.7rem;
+  padding: 2.5rem 7rem 6.5rem 7rem;
+}
+
+.operations__content--active {
+  display: grid;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inline-buttons {
+  display: flex;
+  gap: 10px; /* Adjust the value as per your preference */
+}
+
+.analyze {
+  display: flex;
+  justify-self: center;
+}
+
+#map {
+  height: 700px;
+  margin: 20px 0px 70px;
+  border-radius: 35px;
+}
+
+/* Media Queries */
+
+/* Adjust styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  .header-title {
+    font-size: 16px;
+  }
+
+  #chart {
+    width: 100%;
+  }
+
+  #connections {
+    font-size: 40px;
+  }
+
+  #heart-rate-container {
+    font-size: 30px;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  #startButton,
+  #stopButton,
+  #downloadButton,
+  #uploadInput {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .operations__content {
+    font-size: 1.4rem;
+    padding: 2rem 4rem 5rem 4rem;
+  }
+
+  .card {
+    width: 250px;
+  }
+}
+
+/* Adjust styles for even smaller screens */
+@media only screen and (max-width: 480px) {
+  .header-title {
+    font-size: 14px;
+  }
+
+  #connections {
+    font-size: 30px;
+  }
+
+  #heart-rate-container {
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  #startButton,
+  #stopButton,
+  #downloadButton,
+  #uploadInput {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .operations__content {
+    font-size: 1.2rem;
+    padding: 1.6rem 3.2rem 4rem 3.2rem;
+  }
+
+  .card {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header-title {
+    font-size: 16px;
+  }
+
+  #chart {
+    width: 100%;
+  }
+
+  #connections {
+    font-size: 30px;
+  }
+
+  #heart-rate-container {
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  #startButton,
+  #stopButton,
+  #downloadButton,
+  #uploadInput {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .operations__content {
+    font-size: 1.2rem;
+    padding: 1.6rem 3.2rem 4rem 3.2rem;
+  }
+
+  .card {
+    width: 200px;
+  }
+}

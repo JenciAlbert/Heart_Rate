@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Rate Sensor Demo</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js
+    
+    "></script>
+    <meta
+      name="description"
+      content="Monitor a heart rate sensor with a Web Bluetooth app."
+    />
+    <link rel="icon" sizes="192x192" href="../favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+  </head>
+  <body>
+    <div class="header-title">
+      <h1>Heart Rate Monitor</h1>
+    </div>
+    <!-- <button id="showPageButton" class="btn btn--show">Show Webpage</button> -->
+    <div id="web">
+      <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+            data-tab="1"
+          >
+            <span>01</span>Heart ❤️
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span>02</span>Analyze 📃
+          </button>
+        </div>
+        <div
+          class="operations__content operations__content--1 operations__content--active"
+        >
+          <div id="heart_rate">
+            <div id="connections">
+              <div id="statusText">GET ❤️</div>
+              <div id="Connect">Get &#128694;</div>
+            </div>
+
+            <div id="heart-rate-container">
+              <div>Avarage 💖: <span id="avarageBpm"></span></div>
+              <div>Minimum 💖: <span id="minBpm"></span></div>
+              <div>Maximum 💖: <span id="maxBpm"></span></div>
+            </div>
+          </div>
+          <div id="map"></div>
+          <div class="inline-buttons">
+            <button id="startButton">Start Tracking</button>
+            <button id="stopButton" disabled>Stop Tracking</button>
+            <button id="downloadButton" disabled>Download GPX</button>
+            <input type="file" id="uploadInput" />
+            <button id="uploadButton" style="display: none" disabled>
+              Upload GPX
+            </button>
+          </div>
+        </div>
+
+        <div class="operations__content operations__content--2">
+          <div id="myChartContainer">
+            <div
+              id="main"
+              style="width: 1600px; height: 1000px"
+              style="align-items: center"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/togeojson/0.14.2/togeojson.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script type="module" src="jS/app2.js"></script>
+    <script type="module" src="jS/app.js"></script>
+    <script src="jS/heartRateSensor.js"></script>
+    <script src="jS/what.js"></script>
+    <script type="module" src="jS/firebase.js"></script>
+    <script type="module" src="jS//candenceSensor.js"></script>
+    <script type="module" src="jS/cadenceApp.js"></script>
+    <script src="jS/tabs.js"></script>
+    <script src="jS/map.js"></script>
+  </body>
+</html>
